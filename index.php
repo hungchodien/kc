@@ -1,5 +1,5 @@
 <?php include_once("inc/header.php"); ?>
-
+<!--http://www.kandc.com/chance/vol_2/index.html-->
 <div id="contents" class="contents">
     <div class="title_interview">
         <h1 class="top_interview">連載インタビュー </h1>
