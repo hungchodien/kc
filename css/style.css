@@ -85,9 +85,10 @@ body {
     padding:0px;
     background-color: #FFF;
     font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
-    font-size: 14px;
+
     font-weight: normal;
-    color: #39464f;
+    font-size: 14px;
+    color: black;
     text-decoration: none;
     line-height: 1.7;
 }
@@ -114,13 +115,31 @@ body {
 .wrapper_page{
     max-width: 800px;
     margin: 0 auto;
-    font-size: 14px;
-    color: black;
+    position: relative;
+
 }
 .menu_top{
-    height: 55px;
     background-color: #000000;
     position: relative;
+    height: 55px;
+}
+
+
+
+.site_header{
+    height: 55px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.main-body{
+    position: relative;
+    margin-top: 55px;
 }
 .brand_img{
     padding: 10px 0 10px 10px;
@@ -131,10 +150,10 @@ a#kc_toggle{
     color: #720147;
 }
 .wrapper_page{
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 /*.wrapper_page.menu_active{*/
     /*-moz-transition: all 1s ease;*/
@@ -143,38 +162,146 @@ a#kc_toggle{
     /*transition: all 1s ease;*/
 /*}*/
 .toggle_btn{
-    float: right;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    right: 0;
     font-size: 30px;
-    padding: 0 10px 0 0;
-
+    padding: 0 15px 0 15px;
+}
+.kc_menu_chance.menu_active .toggle_btn_close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    padding: 0 15px 0 15px;
+    z-index: 10000;
+}
+.toggle_btn_close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 30px;
+    padding: 0 15px 0 15px;
+    z-index: 10000;
+}
+.kc_toggle_first,.kc_toggle_second , .kc_toggle_third{
+    background: #720147;
+    display: block;
+    height: 4px;
+    margin: 7px 0;
+    width: 25px;
 }
 
 
+
+.kc_wrapper_menu_scroll{
+    margin-bottom: 100px;
+}
 
 .kc_menu_chance{
     position: fixed;
     top: 0;
     margin-left: 100%;
-    height: 100%;
+    bottom: 0;
+    overflow: scroll;
+    /*height: 100%;*/
     background-color: black;
     color: white;
     z-index: 100;
     width: 100%;
     max-width: 800px;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 .kc_menu_chance.menu_active{
     margin-left: 0;
 
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 #kc_toggle_close{
     color: white;
     font-size: 20px;
     font-weight: bold;
 }
+
+
+.kc_menu_chance ul.kc_menu_vol{
+    margin-top: 5px;
+}
+.kc_menu_chance ul li {
+    padding: 0 20px 0 20px;
+
+}
+.kc_menu_chance ul li a{
+    color: white;
+    padding: 10px 0 10px 20px;
+    display: block;
+    position: relative;
+    border-bottom: 1px dashed #686868;
+}
+.kc_menu_chance ul li a.border_red{
+    border-bottom: 1px solid #720147;
+}
+.kc_menu_chance ul li .kc_btn_menu_chance:before{
+    content: inherit;
+    color: transparent;
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: #720147;
+    border-radius: 30px;
+    left: 0;
+    top: 45%;
+}
+.kc_menu_chance ul li a.none_border{
+    border-bottom: none;
+}
+.kc_menu_chance ul li a:before{
+    content: " ";
+    color: transparent;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: #720147;
+    border-radius: 30px;
+    left: 0;
+    top: 45%;
+}
+
+.kc_menu_chance ul li .kc_btn_menu_chance{
+    color: white;
+    padding: 8px 0 8px 20px;
+    border-radius: 8px;
+}
+.kc_menu_chance ul li .kc_btn_menu_chance.green_bg{
+    margin-bottom: 8px;
+}
+.green_bg{
+    background-color: #118700;
+}
+.red_bg{
+    background-color: #C10000;
+}
+
+
+
+
+
+
+
+
+
+
+
 .thumbnail_vol_page{
     border: 1px solid #DDDDDD;
     padding: 10px;
@@ -308,17 +435,17 @@ a#kc_toggle{
 }
 .title_sign{
     padding: 25px 0 0 10px;
-    /*font-size: 12px;*/
+    /*font-size: 12px;*/font-size: 14px;
 }
 .content_des_sign{
-    /*font-size: 12px;*/
+    /*font-size: 12px;*/font-size: 14px;
     font-weight: bold;
     padding: 0 0 20px 0;
 }
 .item_vol{
     border: 1px solid #DDDDDD;
     margin: 10px 0 0 0;
-    padding: 15px;
+    padding: 8px 15px 15px 15px;
 }
 
 
@@ -327,16 +454,16 @@ a#kc_toggle{
     left: 0;
     background-color: white;
     color: #720147;
-    /*font-size: 12px;*/
+    /*font-size: 12px;*/font-size: 14px;
     padding: 15px 10px 10px 0;
 }
 .top_img_interview_below{
-    /*font-size: 12px;*/
+    /*font-size: 12px;*/font-size: 14px;
     font-weight: bold;
 }
 .description_des_main{
     padding: 55px 0 0 0;
-    /*font-size: 12px;*/
+    /*font-size: 12px;*/font-size: 14px;
 }
 
 .line_tinterview{
@@ -361,7 +488,8 @@ a#kc_toggle{
 .inner_title_item_vol{
     color: #720147;
     /*font-size: 14px;*/font-size: 16px;
-    padding: 0 0 0 15px;
+    padding: 0 0 0 5px;
+    font-style: italic;
 }
 .thumbnail_item_des p{
     /*font-size: 14px;*/font-size: 16px;
@@ -407,8 +535,15 @@ a#kc_toggle{
     padding: 15px;
     text-align: center;
 }
-.banner_adm, .banner_mm{
-    margin-top: 20px;
+.banner_adm{
+    padding-top: 25px;
+    background-size: cover;
+    background-position: center center;
+    background-origin: content-box;
+    position: relative;
+}
+.banner_mm{
+    padding: 15px 0 40px 0;
     background-size: cover;
     background-position: center center;
     background-origin: content-box;
@@ -440,7 +575,7 @@ a#kc_toggle{
     margin-top: 5px;
 }
 .wrap_banner{
-    padding: 20px;
+    /*padding: 20px;*/padding: 0 18px;
     margin-top: 30px;
     background-color: #f2f2f2;
 }
@@ -477,7 +612,9 @@ a#kc_toggle{
     font-size: 20px;
     text-align: center;
 }
-
+.img_banner_fix{
+    width: 100%;
+}
 /* Media queries
 -----------------------------------------*/
 
@@ -568,10 +705,10 @@ a#kc_toggle{
         font-size: 12px;
     }
     .item_vol{
-        padding: 9px;
+        padding: 0 9px 9px 9px;
     }
     .top_interview{
-        font-size: 12px;
+        font-size: 14px;/*font-size: 12px;*/
         padding: 15px 10px 10px 0;
     }
     .top_img_interview_below{

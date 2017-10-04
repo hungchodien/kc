@@ -119,7 +119,7 @@
         <div class="item_vol ">
             <p class="item_vol_title">Vol. 02<span class="inner_title_item_vol">Interview Serial</span></p>
             <div class="thumbnail_item">
-                <a class="" href="<?php echo url_root;?>matsui/index2.php">
+                <a class="" href="<?php echo url_root;?>noguchi/index.php">
                     <div class="wrap_thumbnail_img_item">
                         <img src="<?php echo url_root;?>img/vol_02.png" alt="img_vol_01" />
                     </div>
@@ -133,7 +133,7 @@
         <div class="item_vol ">
             <p class="item_vol_title">Vol. 03<span class="inner_title_item_vol">Interview Serial</span></p>
             <div class="thumbnail_item">
-                <a class="" href="<?php echo url_root;?>matsui/index3.php">
+                <a class="" href="<?php echo url_root;?>hira/index.php">
                     <div class="wrap_thumbnail_img_item">
                         <img src="<?php echo url_root;?>img/vol_03.png" alt="img_vol_01" />
                     </div>
@@ -142,12 +142,13 @@
                         平林 岳<span class="buffer">さん</span>
                     </div>
                 </a>
+
             </div>
         </div>
         <div class="item_vol ">
             <p class="item_vol_title">Vol. 04<span class="inner_title_item_vol">Interview Serial</span></p>
             <div class="thumbnail_item">
-                <a class="" href="<?php echo url_root;?>matsui/index4.php">
+                <a class="" href="<?php echo url_root;?>ishii/index.php">
                     <div class="wrap_thumbnail_img_item">
                         <img src="<?php echo url_root;?>img/vol_04.png" alt="img_vol_01" />
                     </div>
@@ -156,12 +157,13 @@
                         石井 琢朗<span class="buffer">さん</span>
                     </div>
                 </a>
+
             </div>
         </div>
         <div class="item_vol ">
             <p class="item_vol_title">Vol. 05<span class="inner_title_item_vol">Interview Serial</span></p>
             <div class="thumbnail_item">
-                <a class="" href="<?php echo url_root;?>matsui/index5.php">
+                <a class="" href="<?php echo url_root;?>yoneda/index.php">
                     <div class="wrap_thumbnail_img_item">
                         <img src="<?php echo url_root;?>img/vol_05.png" alt="img_vol_01" />
                     </div>
@@ -176,24 +178,26 @@
 </div>
 <div class="wrap_banner">
     <a href="http://www.admsports.biz/" target="_blank">
-        <div class="banner_adm"  data-width = "287" data-height = "90"  style="background-image: url('<?php echo url_root;?>img/ADM.png')">
-            <p class="text_brand_adm">ADM<span class="adm_text_slogan">Athletes Dream Manegement</span>
-                <span class="adm_des">
-                ADMは社会とスポーツの<br/>
-                つながりを創造します。
-            </span>
-            </p>
+        <div class="banner_adm"  data-width = "287" data-height = "90"  >
+            <img class="img_banner_fix" src="<?php echo url_root;?>img/ADM_pr.png" alt="ADM &# Athletes Dream Manegement &# ADMは社会とスポーツの    つながりを創造します。" />
+            <!--            <p class="text_brand_adm">ADM<span class="adm_text_slogan">Athletes Dream Manegement</span>-->
+            <!--                <span class="adm_des">-->
+            <!--                ADMは社会とスポーツの<br/>-->
+            <!--                つながりを創造します。-->
+            <!--            </span>-->
+            <!--            </p>-->
 
         </div>
     </a>
     <a href="https://fm.msgs.jp/v31/r/?id=1000000566/ac01/6" target="_blank">
-        <div id="banner_mm"  class="banner_mm" data-width = "287" data-height = "71" style="background-image: url('<?php echo url_root;?>img/banner_mm.png')">
-            <img class="logo_mm" src="<?php echo url_root;?>img/logo_mm.png" alt="logo_mm" />
-            <p class="text_brand">転機をチャンスに変えた瞬間
-                <span class="mm_des">
-                    メルマガ配信 Mail magazine
-                </span>
-            </p>
+        <div id="banner_mm"  class="banner_mm" data-width = "287" data-height = "71" >
+            <img class="img_banner_fix" src="<?php echo url_root;?>img/banner_mm.png" alt="転機をチャンスに変えた瞬間 &# メルマガ配信 Mail magazine" />
+            <!--            <img class="logo_mm" src="--><?php //echo url_root;?><!--img/logo_mm.png" alt="logo_mm" />-->
+            <!--            <p class="text_brand">転機をチャンスに変えた瞬間-->
+            <!--                <span class="mm_des">-->
+            <!--                    メルマガ配信 Mail magazine-->
+            <!--                </span>-->
+            <!--            </p>-->
 
         </div>
     </a>

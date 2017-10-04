@@ -2,4 +2,4 @@ Options +FollowSymLinks
 RewriteEngine On
 RewriteBase /
 
-redirect 301 http://localhost/kc_chance/vol_01.php http://forum.htm
+redirect 301 https://mediatemple.net/community/products/dv/204643270/using-htaccess-rewrite-rules http://localhost:8080/kc_chance/
